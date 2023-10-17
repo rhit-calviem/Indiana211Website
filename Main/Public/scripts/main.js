@@ -28,3 +28,4 @@
 
 updateCurrentDate();
 setInterval(updateCurrentDate, 86400000);
+
