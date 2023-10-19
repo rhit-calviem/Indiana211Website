@@ -30,6 +30,30 @@
 updateCurrentDate();
 setInterval(updateCurrentDate, 86400000);
 
+ // Define an array of county names
+ var countyNames = [
+    "N/A","Adams", "Allen", "Bartholomew", "Benton", "Blackford", "Boone", "Brown", "Carroll", "Cass", "Clark",
+    "Clay", "Clinton", "Crawford", "Daviess", "Dearborn", "Decatur", "DeKalb", "Delaware", "Dubois", "Elkhart",
+    "Fayette", "Floyd", "Fountain", "Franklin", "Fulton", "Gibson", "Grant", "Greene", "Hamilton", "Hancock",
+    "Harrison", "Hendricks", "Henry", "Howard", "Huntington", "Jackson", "Jasper", "Jay", "Jefferson", "Jennings",
+    "Johnson", "Knox", "Kosciusko", "LaGrange", "Lake", "LaPorte", "Lawrence", "Madison", "Marion", "Marshall",
+    "Martin", "Miami", "Monroe", "Montgomery", "Morgan", "Newton", "Noble", "Ohio", "Orange", "Owen", "Parke",
+    "Perry", "Pike", "Porter", "Posey", "Pulaski", "Putnam", "Randolph", "Ripley", "Rush", "St. Joseph", "Scott",
+    "Shelby", "Spencer", "Starke", "Steuben", "Sullivan", "Switzerland", "Tippecanoe", "Tipton", "Union", "Vanderburgh",
+    "Vermillion", "Vigo", "Wabash", "Warren", "Warrick", "Washington", "Wayne", "Wells", "White", "Whitley"
+  ];
+
+  // Get the select element by ID
+  var countyDropdown = document.getElementById("countyDropdown");
+
+  // Loop through the county names array and create option elements
+  countyNames.forEach(function(name, index) {
+    var option = document.createElement("option");
+    option.value = "county" + (index + 1);
+    option.text = name;
+    countyDropdown.appendChild(option);
+  });
+
 
 // Nested checkbox
 document.getElementById("basic-needs").addEventListener("change", function () {

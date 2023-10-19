@@ -34,3 +34,41 @@ footer {
 #nested-checkboxes1, #nested-checkboxes2, #nested-checkboxes3, #nested-checkboxes4, #nested-checkboxes5, #nested-checkboxes6, #nested-checkboxes7, #nested-checkboxes8, #nested-checkboxes9, #nested-checkboxes10 {
     margin-left: 20px; /* Adjust the margin to control the indentation */
 }
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin:20px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.card h2 {
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info p {
+    text-align: left;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+}

@@ -63,32 +63,6 @@
           <select class="form-control" id="countyDropdown">
           </select>
         </div>
-        
-        <script>
-          // Define an array of county names
-          var countyNames = [
-            "N/A","Adams", "Allen", "Bartholomew", "Benton", "Blackford", "Boone", "Brown", "Carroll", "Cass", "Clark",
-            "Clay", "Clinton", "Crawford", "Daviess", "Dearborn", "Decatur", "DeKalb", "Delaware", "Dubois", "Elkhart",
-            "Fayette", "Floyd", "Fountain", "Franklin", "Fulton", "Gibson", "Grant", "Greene", "Hamilton", "Hancock",
-            "Harrison", "Hendricks", "Henry", "Howard", "Huntington", "Jackson", "Jasper", "Jay", "Jefferson", "Jennings",
-            "Johnson", "Knox", "Kosciusko", "LaGrange", "Lake", "LaPorte", "Lawrence", "Madison", "Marion", "Marshall",
-            "Martin", "Miami", "Monroe", "Montgomery", "Morgan", "Newton", "Noble", "Ohio", "Orange", "Owen", "Parke",
-            "Perry", "Pike", "Porter", "Posey", "Pulaski", "Putnam", "Randolph", "Ripley", "Rush", "St. Joseph", "Scott",
-            "Shelby", "Spencer", "Starke", "Steuben", "Sullivan", "Switzerland", "Tippecanoe", "Tipton", "Union", "Vanderburgh",
-            "Vermillion", "Vigo", "Wabash", "Warren", "Warrick", "Washington", "Wayne", "Wells", "White", "Whitley"
-          ];
-        
-          // Get the select element by ID
-          var countyDropdown = document.getElementById("countyDropdown");
-        
-          // Loop through the county names array and create option elements
-          countyNames.forEach(function(name, index) {
-            var option = document.createElement("option");
-            option.value = "county" + (index + 1);
-            option.text = name;
-            countyDropdown.appendChild(option);
-          });
-        </script>
 
         <div class="container">
           <h3>Type of Service (Taxonomy Driven)</h3>
@@ -295,11 +269,37 @@
           </form>
         </div>
 
+        
         <div class="col-sm-12 mt-2">
           <button class="btn btn-primary" type="button">Search</button>
         </div>
       </form>
     </div>
+    <br>
+    <br>
+
+    <!-- Card Display -->
+    <div class="container">
+      <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+              <div class="card">
+                  <h2>Card Title</h2>
+                  <div class="info">
+                      <p><strong>Type:</strong> Type Information</p>
+                      <p><strong>Description:</strong> Description Information</p>
+                      <p><strong>Number:</strong> Number Information</p>
+                      <p><strong>Website:</strong> Website Information</p>
+                  </div>
+                  <div class="button">
+                      <a href="#">Get more Info</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2"></div>
+      </div>
+  </div>
+
     
     <footer>
       As of <span id="print-date-footer"></span> the list provided is the most up to date information available to Indiana 211 for the types and locations of resources selected.
