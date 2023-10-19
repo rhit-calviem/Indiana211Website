@@ -33,7 +33,54 @@ setInterval(updateCurrentDate, 86400000);
 
 // Nested checkbox
 document.getElementById("basic-needs").addEventListener("change", function () {
-    var nestedCheckboxes = document.querySelector(".nested-checkboxes");
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes1");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
 });
+
+document.getElementById("housing").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes2");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("utilities").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes3");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("tax-assistance").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes4");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("transportation").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes5");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("legal-assistance").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes6");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("education").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes7");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("employment").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes8");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("family-self-care").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes9");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("healthcare").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes10");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+
 
