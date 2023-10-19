@@ -108,3 +108,14 @@ document.getElementById("healthcare").addEventListener("change", function () {
 
 
 
+
+  // Get a reference to the search button and card container
+  const searchButton = document.getElementById("searchButton");
+  const cardContainer = document.getElementById("cardContainer");
+
+  // Add a click event listener to the search button
+  searchButton.addEventListener("click", function() {
+    // Show the card container
+    cardContainer.style.display = "block";
+  });
+
