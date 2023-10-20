@@ -109,13 +109,80 @@ document.getElementById("healthcare").addEventListener("change", function () {
 
 
 
-  // Get a reference to the search button and card container
-  const searchButton = document.getElementById("searchButton");
-  const cardContainer = document.getElementById("cardContainer");
+// Get a reference to the search button and card container
+const searchButton = document.getElementById("searchButton");
+const cardContainer = document.getElementById("cardContainer");
 
-  // Add a click event listener to the search button
-  searchButton.addEventListener("click", function() {
-    // Show the card container
-    cardContainer.style.display = "block";
+// Add a click event listener to the search button
+searchButton.addEventListener("click", function() {
+  // Show the card container
+  cardContainer.style.display = "block";
+});
+
+//   // Get all form-check elements
+//   const formCheckboxes = document.querySelectorAll('.form-check');
+
+//   // Add a click event listener to each form-check element
+//   formCheckboxes.forEach((formCheck) => {
+//     formCheck.addEventListener('click', () => {
+//       // Hide all checkboxes (including subcategories)
+//       formCheckboxes.forEach((checkbox) => {
+//         checkbox.style.display = 'none';
+//       });
+
+//       // Show the clicked checkbox and its subcategories
+//       formCheck.style.display = 'block';
+
+//       // If it's a top-level category, show its subcategories
+//       if (formCheck.querySelector('input').classList.contains('form-check-input-category')) {
+//         const subcategories = formCheck.parentNode.querySelectorAll('.form-check-input-subcategory');
+//         subcategories.forEach((subcategory) => {
+//           subcategory.closest('.form-check').style.display = 'block';
+//         },
+//         formCheck.style.display = 'block');
+//     }
+//     });
+//   });
+
+
+// Get all form-check elements
+const formCheckboxes = document.querySelectorAll('.form-check');
+
+// Store the initial state of the checkboxes
+const initialState = {};
+formCheckboxes.forEach((formCheck) => {
+  initialState[formCheck.id] = formCheck.style.display;
+});
+
+// Function to reset checkboxes to their initial state
+function resetCheckboxes() {
+  formCheckboxes.forEach((formCheck) => {
+    formCheck.style.display = 'block'; // Reset all checkboxes to be displayed
+    formCheck.querySelector('input').checked = false; // Uncheck the checkboxes
   });
+}
 
+// Add a click event listener to each form-check element
+formCheckboxes.forEach((formCheck) => {
+  formCheck.addEventListener('click', () => {
+    // Hide all checkboxes (including subcategories)
+    formCheckboxes.forEach((checkbox) => {
+      checkbox.style.display = 'none';
+    });
+
+    // Show the clicked checkbox and its subcategories
+    formCheck.style.display = 'block';
+
+    // If it's a top-level category, show its subcategories
+    if (formCheck.querySelector('input').classList.contains('form-check-input-category')) {
+      const subcategories = formCheck.parentNode.querySelectorAll('.form-check-input-subcategory');
+      subcategories.forEach((subcategory) => {
+        subcategory.closest('.form-check').style.display = 'block';
+      });
+      formCheck.style.display = 'block';
+    }
+  });
+});
+
+// Get the "Go Back" button by ID and add a click event listener to reset checkboxes
+document.getElementById('goBackButton').addEventListener('click', resetCheckboxes);
