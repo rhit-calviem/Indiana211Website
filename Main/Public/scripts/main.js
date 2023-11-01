@@ -156,6 +156,170 @@ document.getElementById("food6").addEventListener("change", function () {
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
 });
 
+document.getElementById("Housing/Shelter1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes21");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes22");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter3").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes23");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes24");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter5").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes25");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter7").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes26");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter10").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes27");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter11").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes28");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter12").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes29");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Housing/Shelter13").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes30");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Utilities1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes31");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Utilities2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes32");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Transportation1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes33");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Transportation4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes34");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Transportation6").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes35");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Material Goods2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes36");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Material Goods3").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes37");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Material Goods4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes38");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Material Goods5").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes39");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Material Goods6").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes40");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("emergency-food6").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Emergency Shelter2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes42");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Home Improvement/ Accessibility1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes43");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Home Improvement/ Accessibility2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes44");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Residential Housing Options1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes45");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Household Goods1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes46");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Household Goods4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes47");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Personal Goods/Services1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes48");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Personal Goods/Services2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes49");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Local Transportation1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes50");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Local Transportation4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes51");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Utility Assistance1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes52");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("Utility Assistance3").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes53");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
 
 // Get a reference to the search button and card container
 const searchButton = document.getElementById("searchButton");

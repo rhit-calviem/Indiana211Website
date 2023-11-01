@@ -39,8 +39,15 @@ footer {
     margin-left: 40px; /* Adjust the margin to control the indentation */
 }
 
-#nested-checkboxes16, #nested-checkboxes17, #nested-checkboxes18, #nested-checkboxes19, #nested-checkboxes20 {
+#nested-checkboxes16, #nested-checkboxes17, #nested-checkboxes18, #nested-checkboxes19, #nested-checkboxes20, #nested-checkboxes21, #nested-checkboxes22, #nested-checkboxes23, #nested-checkboxes24, 
+#nested-checkboxes25, #nested-checkboxes26, #nested-checkboxes27, #nested-checkboxes28, #nested-checkboxes29, #nested-checkboxes30, #nested-checkboxes31, #nested-checkboxes32, #nested-checkboxes33, 
+#nested-checkboxes34, #nested-checkboxes35, #nested-checkboxes36, #nested-checkboxes37, #nested-checkboxes38, #nested-checkboxes39, #nested-checkboxes40  {
     margin-left: 60px; /* Adjust the margin to control the indentation */
+}
+
+#nested-checkboxes41, #nested-checkboxes42, #nested-checkboxes43, #nested-checkboxes44, #nested-checkboxes45, #nested-checkboxes46, #nested-checkboxes47, #nested-checkboxes48, #nested-checkboxes49, #nested-checkboxes50,
+#nested-checkboxes51, #nested-checkboxes52, #nested-checkboxes52  {
+    margin-left: 80px;
 }
 
 .card {
