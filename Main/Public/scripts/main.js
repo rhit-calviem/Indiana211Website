@@ -106,7 +106,55 @@ document.getElementById("healthcare").addEventListener("change", function () {
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
 });
 
+document.getElementById("basic-needs1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes11");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
 
+document.getElementById("basic-needs2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes12");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("basic-needs3").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes13");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("basic-needs4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes14");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("basic-needs5").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes15");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("food1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes16");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("food3").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes17");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("food4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes18");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("food5").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes19");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
+
+document.getElementById("food6").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes20");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+});
 
 
 // Get a reference to the search button and card container

@@ -34,6 +34,15 @@ footer {
 #nested-checkboxes1, #nested-checkboxes2, #nested-checkboxes3, #nested-checkboxes4, #nested-checkboxes5, #nested-checkboxes6, #nested-checkboxes7, #nested-checkboxes8, #nested-checkboxes9, #nested-checkboxes10 {
     margin-left: 20px; /* Adjust the margin to control the indentation */
 }
+
+#nested-checkboxes11, #nested-checkboxes12, #nested-checkboxes13, #nested-checkboxes14, #nested-checkboxes15 {
+    margin-left: 40px; /* Adjust the margin to control the indentation */
+}
+
+#nested-checkboxes16, #nested-checkboxes17, #nested-checkboxes18, #nested-checkboxes19, #nested-checkboxes20 {
+    margin-left: 60px; /* Adjust the margin to control the indentation */
+}
+
 .card {
     background-color: #fff;
     border-radius: 20px;

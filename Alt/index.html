@@ -1,29 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Query</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Skranji">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css' integrity='sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==' crossorigin='anonymous'/>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' href="styles/main.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  </head>
-  <body>
+<head>
+  <style>
+    /* Style to hide subcategory lists by default */
+    .subcategory {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Basic Needs</h1>
+  <ul id="category-list">
+    <!-- Categories will be dynamically created here -->
+  </ul>
 
+  <h2>Selected Subcategories:</h2>
+  <ul id="selected-subcategories"></ul>
 
-   
+  <script>
+    const categories = [
+      {
+        name: "Food",
+        subcategories: [
+          "Emergency Food",
+          "Emergency Food Clearing Houses",
+          // Add more subcategories here
+        ],
+      },
+      {
+        name: "Housing/Shelter",
+        subcategories: [
+          "At Risk/Homeless Housing Related Assistance Programs",
+          "Emergency Shelter",
+          // Add more subcategories here
+        ],
+      },
+      // Add more main categories here
+    ];
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="scripts/main.js"></script>
-  </body>
+    const categoryList = document.getElementById("category-list");
+    const selectedSubcategories = document.getElementById("selected-subcategories");
 
+    categories.forEach((category) => {
+      const categoryItem = document.createElement("li");
+      categoryItem.innerHTML = `
+        <label>
+          <input type="checkbox" class="category" data-target="${category.name}">${category.name}
+        </label>
+      `;
+
+      const subcategoryList = document.createElement("ul");
+      subcategoryList.classList.add("subcategory", category.name);
+      category.subcategories.forEach((subcategory) => {
+        const subcategoryItem = document.createElement("li");
+        subcategoryItem.innerHTML = `
+          <label>
+            <input type="checkbox" class="subcategory" data-target="${subcategory}">${subcategory}
+          </label>
+        `;
+        subcategoryList.appendChild(subcategoryItem);
+      });
+
+      categoryItem.appendChild(subcategoryList);
+      categoryList.appendChild(categoryItem);
+    });
+
+    const categoryCheckboxes = document.querySelectorAll(".category");
+
+    categoryCheckboxes.forEach((categoryCheckbox) => {
+      categoryCheckbox.addEventListener("change", function () {
+        const target = this.getAttribute("data-target");
+        const subcategoryList = document.querySelector(`ul.${target}`);
+
+        if (subcategoryList) {
+          if (this.checked) {
+            subcategoryList.style.display = "block";
+          } else {
+            subcategoryList.style.display = "none";
+          }
+        }
+      });
+    });
+
+    // JavaScript to display selected subcategories
+    categoryCheckboxes.forEach((categoryCheckbox) => {
+      categoryCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+          const label = this.parentElement.textContent.trim();
+          const listItem = document.createElement("li");
+          listItem.textContent = label;
+          selectedSubcategories.appendChild(listItem);
+        }
+      });
+    });
+  </script>
+</body>
 </html>
