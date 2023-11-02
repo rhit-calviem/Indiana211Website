@@ -62,6 +62,7 @@ setInterval(updateCurrentDate, 86400000);
 document.getElementById("basic-needs").addEventListener("change", function () {
     var nestedCheckboxes = document.querySelector("#nested-checkboxes1");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    
 });
 
 document.getElementById("housing").addEventListener("change", function () {
@@ -112,6 +113,8 @@ document.getElementById("healthcare").addEventListener("change", function () {
 document.getElementById("basic-needs1").addEventListener("change", function () {
     var nestedCheckboxes = document.querySelector("#nested-checkboxes11");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel3 = "Emergency Food";
+    console.log(criteria);
 });
 
 document.getElementById("basic-needs2").addEventListener("change", function () {
@@ -375,7 +378,7 @@ searchButton.addEventListener("click", function() {
 });
   
 
-function fetchData(criteria) {
+async function fetchData(criteria) {
     fetch('http://localhost:3030/data')
       .then((response) => response.json())
       .then((data) => {
