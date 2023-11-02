@@ -15,7 +15,6 @@
 //      }
 //  });
 
-
  // Get updated time for header/ footer
  function updateCurrentDate() {
     const currentDate = new Date();
@@ -49,16 +48,27 @@ setInterval(updateCurrentDate, 86400000);
   // Loop through the county names array and create option elements
   countyNames.forEach(function(name, index) {
     var option = document.createElement("option");
-    option.value = "county" + (index + 1);
+    option.value = name;
     option.text = name;
     countyDropdown.appendChild(option);
   });
 
+  const criteria = {
+    taxonomy_category: "",
+    nameLevel2: "",
+    nameLevel3: "",
+    nameLevel4: "",
+    nameLevel5: "",
+    zipcode: "",
+    county: ""
+  };
 
 // Nested checkbox
 document.getElementById("basic-needs").addEventListener("change", function () {
     var nestedCheckboxes = document.querySelector("#nested-checkboxes1");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.taxonomy_category = "Basic Needs";
+    console.log(criteria);
 });
 
 document.getElementById("housing").addEventListener("change", function () {
@@ -109,6 +119,9 @@ document.getElementById("healthcare").addEventListener("change", function () {
 document.getElementById("basic-needs1").addEventListener("change", function () {
     var nestedCheckboxes = document.querySelector("#nested-checkboxes11");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel2 = "Food";
+    console.log(criteria);
+
 });
 
 document.getElementById("basic-needs2").addEventListener("change", function () {
@@ -134,6 +147,8 @@ document.getElementById("basic-needs5").addEventListener("change", function () {
 document.getElementById("food1").addEventListener("change", function () {
     var nestedCheckboxes = document.querySelector("#nested-checkboxes16");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel3 = "Emergency Food";
+    console.log(criteria);
 });
 
 document.getElementById("food3").addEventListener("change", function () {
@@ -256,9 +271,48 @@ document.getElementById("Material Goods6").addEventListener("change", function (
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
 });
 
+//DOUBLE CHECK THESE
+
+document.getElementById("emergency-food1").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel4 = "Brown Bag Food Programs";
+    console.log(criteria);
+});
+
+document.getElementById("emergency-food2").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel4 = "Commodity Supplemental Food Program";
+    console.log(criteria);
+});
+
+document.getElementById("emergency-food3").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel4 = "Food Pantries";
+    console.log(criteria);
+});
+
+document.getElementById("emergency-food4").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel4 = "Food Vouchers";
+    console.log(criteria);
+});
+
+document.getElementById("emergency-food5").addEventListener("change", function () {
+    var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
+    nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel4 = "Packed Lunches/Dinner";
+    console.log(criteria);
+});
+
 document.getElementById("emergency-food6").addEventListener("change", function () {
     var nestedCheckboxes = document.querySelector("#nested-checkboxes41");
     nestedCheckboxes.style.display = this.checked ? "block" : "none";
+    criteria.nameLevel4 = "Specialty Food Providers";
+    console.log(criteria);
 });
 
 document.getElementById("Emergency Shelter2").addEventListener("change", function () {
@@ -328,5 +382,118 @@ const cardContainer = document.getElementById("cardContainer");
 // Add a click event listener to the search button
 searchButton.addEventListener("click", function() {
   // Show the card container
+  const zipCodeValue = zipCodeInput.value;
+  const countyValue = countyDropdown.value;
+  if(zipCodeValue == "" || zipCodeValue == "N/A") {
+    delete criteria.zipcode;
+  } else {
+    const parsedZipCode = parseInt(zipCodeValue, 10);
+    criteria.zipcode = parsedZipCode;
+  }
+  if(countyValue == "N/A") {
+    delete criteria.county;
+  } else {
+    criteria.county = countyValue;
+  }
+  console.log(criteria);
+  fetchData(criteria);
   cardContainer.style.display = "block";
 });
+  
+//       const extractedInfo = matchingItems.map((item) => ({
+//         address_1: item.address_1,
+//         city: item.city,
+//         zipcode: item.zipcode,
+//         county: item.county,
+//         service_id: item.service_id,
+//         service_description: item.service_description,
+//         site_name: item.site_name,
+//         site_number: item.site_number,
+//         service_website: item.service_website,
+//         taxonomy_name: item.taxonomy_name
+//       }));
+
+// async function fetchData(criteria) {
+//     try {
+//       const response = await fetch("./data/realResources.json");
+//       if (!response.ok) {
+//         throw new Error("Failed to fetch the data");
+//       }
+//       const jsonData = await response.json();
+  
+//       // Find matching items based on the criteria
+//       const matchingItems = jsonData.filter((item) => {
+//         for (const key in criteria) {
+//           if (item[key] !== criteria[key]) {
+//             return false;
+//           }
+//         }
+//         return true;
+//       });
+  
+//       // Extract the desired information from the matching item(s)
+//       const extractedInfo = matchingItems.map((item) => ({
+//         address_1: item.address_1,
+//         city: item.city,
+//         zipcode: item.zipcode,
+//         county: item.county,
+//         service_id: item.service_id,
+//         service_description: item.service_description,
+//         site_name: item.site_name,
+//         site_number: item.site_number,
+//         service_website: item.service_website,
+//       }));
+  
+//       // Log the extracted information
+        // createCards(extractedInfo);
+        // document.getElementById('cardContainer').style.display = 'block';
+//       console.log(extractedInfo);
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   }
+
+function fetchData(criteria) {
+    fetch('/data')
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredData = data.filter((item) => {
+          for (const key in criteria) {
+            if (item[key] !== criteria[key]) {
+              return false;
+            }
+          }
+          return true;
+        });
+        createCards(filteredData);
+        document.getElementById('cardContainer').style.display = 'block';
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
+  function createCards(data) {
+    const cardContainer = document.getElementById('cardContainer');
+    data.forEach((item) => {
+      const card = document.createElement('div');
+      card.className = 'col-md-4';
+      card.innerHTML = `
+        <div class="card">
+          <h2>${item.service_name}</h2>
+          <div class="info">
+            <p><strong>Type:</strong> ${item.taxonomy_name}</p>
+            <p><strong>Description:</strong> ${item.service_description}</p>
+            <p><strong>Address:</strong> ${item.address_1}, ${item.city}, ${item.zipcode}, ${item.county}</p>
+            <p><strong>Number:</strong> ${item.site_number}</p>
+            <p><strong>Website:</strong> <a href="${item.service_website}" target="_blank">${item.service_website}</a></p>
+          </div>
+          <div class="button">
+            <a href="#">Get more Info</a>
+          </div>
+        </div>
+      `;
+      cardContainer.appendChild(card);
+    });
+  }
+  
