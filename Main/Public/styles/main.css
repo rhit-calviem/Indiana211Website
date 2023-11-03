@@ -1,48 +1,19 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-nav {
-    font-size: 20px;
-    font-family: 'Bitter';
-    color: black;
-}
-header {
-    top: 5px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: black;
-}
-footer {
-    position: fixed;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-.container mt-4{
-    font-size: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.form-check-label {
-    font-size: 20px;
-}
 .dropdown-scroll {
-    max-height: 50px; /* Adjust the height as needed */
+    max-height: 50px;
     overflow-y: auto;
-  }
+} 
 #nested-checkboxes1, #nested-checkboxes2, #nested-checkboxes3, #nested-checkboxes4, #nested-checkboxes5, #nested-checkboxes6, #nested-checkboxes7, #nested-checkboxes8, #nested-checkboxes9, #nested-checkboxes10 {
-    margin-left: 20px; /* Adjust the margin to control the indentation */
+    margin-left: 20px;
 }
 
 #nested-checkboxes11, #nested-checkboxes12, #nested-checkboxes13, #nested-checkboxes14, #nested-checkboxes15 {
-    margin-left: 40px; /* Adjust the margin to control the indentation */
+    margin-left: 40px; 
 }
 
 #nested-checkboxes16, #nested-checkboxes17, #nested-checkboxes18, #nested-checkboxes19, #nested-checkboxes20, #nested-checkboxes21, #nested-checkboxes22, #nested-checkboxes23, #nested-checkboxes24, 
 #nested-checkboxes25, #nested-checkboxes26, #nested-checkboxes27, #nested-checkboxes28, #nested-checkboxes29, #nested-checkboxes30, #nested-checkboxes31, #nested-checkboxes32, #nested-checkboxes33, 
 #nested-checkboxes34, #nested-checkboxes35, #nested-checkboxes36, #nested-checkboxes37, #nested-checkboxes38, #nested-checkboxes39, #nested-checkboxes40  {
-    margin-left: 60px; /* Adjust the margin to control the indentation */
+    margin-left: 60px;
 }
 
 #nested-checkboxes41, #nested-checkboxes42, #nested-checkboxes43, #nested-checkboxes44, #nested-checkboxes45, #nested-checkboxes46, #nested-checkboxes47, #nested-checkboxes48, #nested-checkboxes49, #nested-checkboxes50,
@@ -50,72 +21,124 @@ footer {
     margin-left: 80px;
 }
 
-
-
-.info {
-    margin-top: 20px;
-}
-
-.info p {
-    text-align: left;
-}
-
-.button {
-    margin-top: 20px;
-}
-
-.button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #005191;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px;
-}
-.card {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin:20px;
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', Helvetica, sans-serif;
+    background-color: #f0f5f9; /* Light blue background color */
+    color: #333; /* Dark text color */
+  }
+  
+  header {
+    text-align: center;
+    color: #005191; /* Blue header text color */
+    font-size: 15px;
+    padding: 10px;
+    background-color: #fff; /* White header background color */
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 10px 40px #005191;
-}
-
-.card h2 {
-    font-size: 24px;
-}
-
-.card p {
-    font-size: 16px;
-}
-
-#searchButton, #listView, #cardView, #navButton{
-    background-color: #005191;
-    color: #fff;
-}
-
-#collapsibleNavbar{
-    color: #005191;
-}
-
-.navbar a.nav-link {
-    color: #005191;
-}
-
-.navbar {
-    box-shadow: 0 10px 40px #005191;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-#listView, #cardView {
-    margin-top: 40px;
-}
-
-#searchBar {
+    color: #005191; /* Blue footer text color */
+    font-size: 15px;
+    padding: 10px;
+    background-color: #fff; /* White footer background color */
+  }
+  
+  .navbar {
     font-size: 20px;
-}
+    font-family: 'Bitter', sans-serif;
+    color: #fff; /* White navbar text color */
+    box-shadow: 0 5px 20px #005191;
+  }
+  
+  .navbar a.nav-link {
+    color: #005191; /* White navbar link text color */
+  }
+  
+  .container {
+    background-color: #fff; /* White container background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .container h2 {
+    color: #005191; /* Blue header text color */
+    font-size: 28px;
+  }
+  
+  .form-group label {
+    color: #005191; /* Blue label text color */
+    font-size: 20px;
+  }
+  
+  .form-control {
+    border: 1px solid #005191; /* Blue border for input fields */
+  }
+  
+  .form-check-label {
+    font-size: 20px;
+    color: #333; /* Dark text color for labels */
+  }
+  
+  .button-container {
+    text-align: center;
+    /* margin-top: 20px; */
+  }
+  
+  .btn {
+    background-color: #005191; /* Blue button background color */
+    color: #fff; /* White button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #003366; /* Darker blue on hover */
+  }
+  
+  #cardContainer {
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: #fff; /* White card background color */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #333; /* Dark text color */
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    color: #005191; /* Blue card title color */
+  }
+  
+  .card p {
+    font-size: 16px;
+  }
+  
+  #searchButton, #listView, #cardView, #navButton {
+    background-color: #005191; /* Blue button background color */
+    color: #fff; /* White button text color */
+  }
+  
+  #searchBar {
+    font-size: 20px;
+  }
+  
