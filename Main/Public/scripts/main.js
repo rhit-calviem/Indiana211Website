@@ -392,7 +392,10 @@ async function fetchData(criteria) {
         });
         console.log(filteredData);
         createCards(filteredData);
+        createTable(filteredData);
         document.getElementById('cardContainer').style.display = 'block';
+        document.getElementById('tableContainer').style.display = 'none';
+
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -422,3 +425,70 @@ async function fetchData(criteria) {
 
   }
   
+  function createTable(data) {
+    const tableContainer = document.getElementById('tableContainer');
+    tableContainer.innerHTML = '';
+
+    // Create a table element
+    const table = document.createElement('table');
+    table.classList.add('table', 'table-custom'); // Bootstrap table styles and custom table class
+
+    // Create a table header
+    const tableHeader = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = `
+        <th>Service Name</th>
+        <th>Type</th>
+        <th>Address</th>
+        <th>Number</th>
+        <th>Website</th>
+    `;
+    tableHeader.appendChild(headerRow);
+    table.appendChild(tableHeader);
+
+    // Create a table body
+    const tableBody = document.createElement('tbody');
+    data.forEach((item) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.service_name}</td>
+            <td>${item.taxonomy_name}</td>
+            <td>${item.address_1}, ${item.city}, ${item.zipcode}, ${item.county}</td>
+            <td>${item.site_number}</td>
+            <td><a href="${item.service_website}" target="_blank">${item.service_website}</a></td>
+        `;
+        tableBody.appendChild(row);
+    });
+    table.appendChild(tableBody);
+    tableContainer.appendChild(table);
+    tableContainer.classList.add('d-flex', 'justify-content-center', 'align-items-center');
+    table.style.display = 'none';
+}
+
+const showTableButton = document.getElementById('listView');
+showTableButton.addEventListener('click', function () {
+    const tableContainer = document.getElementById('tableContainer');
+    const cardContainer = document.getElementById('cardContainer');
+    const table = tableContainer.querySelector('table');
+
+    table.style.display = 'table';
+    tableContainer.style.display = 'block';
+    cardContainer.style.display = 'none';
+});
+
+const showCardButton = document.getElementById('cardView');
+showCardButton.addEventListener('click', function () {
+    const tableContainer = document.getElementById('tableContainer');
+    const cardContainer = document.getElementById('cardContainer');
+    const table = tableContainer.querySelector('table');
+
+    cardContainer.style.display = 'block';
+    table.style.display = 'none';
+    tableContainer.style.display = 'none';
+
+});
+
+
+
+
+
