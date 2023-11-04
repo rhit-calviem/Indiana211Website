@@ -55,7 +55,7 @@
   
   .navbar {
     font-size: 20px;
-    font-family: 'Bitter', sans-serif;
+    font-family: 'Arial', Helvetica, sans-serif;
     color: #fff; /* White navbar text color */
     box-shadow: 0 5px 20px #005191;
   }
@@ -134,13 +134,23 @@
     font-size: 16px;
   }
   
-  #searchButton, #listView, #cardView, #navButton {
+  #searchButton, #listView, #cardView {
     background-color: #005191; /* Blue button background color */
     color: #fff; /* White button text color */
+    border-radius: 10px;
+    font-size: 10px;
+    box-shadow: 0 5px 20px #005191;
+  }
+
+  #navButton{
+    background-color: #005191; /* Blue button background color */
+    color: #fff; /* White button text color */
+    border-radius: 10px;
+    font-size: 10px;
   }
   
   #searchBar {
-    font-size: 20px;
+    font-size: 40px;
   }
   
 /* Define custom table styles */
