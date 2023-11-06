@@ -25,6 +25,7 @@
     const formattedDate = `${month}/${day}/${year}`;
 
     document.getElementById("print-date").textContent = formattedDate;
+    document.getElementById("print-date-f").textContent = formattedDate;
 }
 updateCurrentDate();
 setInterval(updateCurrentDate, 86400000);
