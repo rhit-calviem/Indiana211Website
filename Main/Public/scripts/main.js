@@ -417,6 +417,7 @@ async function fetchData(criteria) {
             <p><strong>Address:</strong> ${item.address_1}, ${item.city}, ${item.zipcode}, ${item.county}</p>
             <p><strong>Number:</strong> ${item.site_number}</p>
             <p><strong>Website:</strong> <a href="${item.service_website}" target="_blank">${item.service_website}</a></p>
+            <p><strong>Hours:</strong> ${item.site_schedule}</p>
           </div>
         </div>
       `;
@@ -443,6 +444,7 @@ async function fetchData(criteria) {
         <th>Address</th>
         <th>Number</th>
         <th>Website</th>
+        <th>Hours</th>
     `;
     tableHeader.appendChild(headerRow);
     table.appendChild(tableHeader);
@@ -457,6 +459,7 @@ async function fetchData(criteria) {
             <td>${item.address_1}, ${item.city}, ${item.zipcode}, ${item.county}</td>
             <td>${item.site_number}</td>
             <td><a href="${item.service_website}" target="_blank">${item.service_website}</a></td>
+            <td>${item.site_schedule}</td>
         `;
         tableBody.appendChild(row);
     });
