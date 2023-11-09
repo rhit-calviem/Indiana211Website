@@ -492,6 +492,12 @@ showCardButton.addEventListener('click', function () {
 
 });
 
+const printButton = document.getElementById("printButton");
+
+  printButton.addEventListener("click", function () {
+    window.print();
+  });
+
 
 
 

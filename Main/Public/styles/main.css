@@ -134,7 +134,7 @@
     font-size: 16px;
   }
   
-  #searchButton, #listView, #cardView {
+  #searchButton, #listView, #cardView, #printButton {
     background-color: #005191; /* Blue button background color */
     color: #fff; /* White button text color */
     border-radius: 10px;
@@ -179,4 +179,13 @@
 
 #tableContainer {
   display: none;
+}
+
+@media print {
+  body * {
+    display: none;
+  }
+  #cardContainer, #tableContainer {
+    display: block !important;
+  }
 }
