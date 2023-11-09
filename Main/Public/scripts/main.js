@@ -494,11 +494,28 @@ showCardButton.addEventListener('click', function () {
 
 const printButton = document.getElementById("printButton");
 
-  printButton.addEventListener("click", function () {
-    window.print();
+printButton.addEventListener("click", function () {
+  const cardContainer = document.getElementById('cardContainer');
+  const cards = cardContainer.querySelectorAll('.card');
+
+  if (cards.length === 0) {
+    alert("No cards to print.");
+    return;
+  }
+
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+  const windowWidth = 1000;
+  const windowHeight = 1000;
+  const left = (screenWidth - windowWidth) / 2;
+  const top = (screenHeight - windowHeight) / 2;
+
+  const printWindow = window.open('', '', `width=${windowWidth},height=${windowHeight},left=${left},top=${top}`);
+  const printDocument = printWindow.document;
+
+  // Add the card HTML to the print window
+  cards.forEach((card) => {
+    printDocument.body.appendChild(card.cloneNode(true));
   });
-
-
-
-
+});
 
