@@ -30,16 +30,16 @@
   
   body {
     font-family: 'Arial', Helvetica, sans-serif;
-    background-color: #f0f5f9; /* Light blue background color */
+    background-color: #005191; /* Light blue background color */
     color: #333; /* Dark text color */
   }
   
   header {
     text-align: center;
-    color: #005191; /* Blue header text color */
+    color: #fff; /* Blue header text color */
     font-size: 15px;
     padding: 10px;
-    background-color: #fff; /* White header background color */
+    background-color: #005191; /* White header background color */
   }
   
   footer {
@@ -47,10 +47,10 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: #005191; /* Blue footer text color */
+    color: #fff; /* Blue footer text color */
     font-size: 15px;
     padding: 10px;
-    background-color: #fff; /* White footer background color */
+    background-color: #005191; /* White footer background color */
   }
   
   .navbar {
